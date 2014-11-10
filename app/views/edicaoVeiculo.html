@@ -1,0 +1,8 @@
+<div ng-show="success" class="alert alert-success" role="alert">{{success}}</div>
+<div ng-show="error" class="alert alert-danger" role="alert">{{error}}</div>
+<div class="panel panel-default">
+  <div class="panel-heading">Editar veículo</div>
+  <div class="panel-body">
+    <form role="form" ng-submit="updateVeiculo(veiculo)" ng-include="'views/veiculoForm.html'" ng-init="loadVeiculo(nuPlaca)"></form>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div ng-controller="VeiculoCtrl" ng-init="loadVeiculos()">
+  <div ng-show="success" class="alert alert-success" role="alert">{{success}}</div>
+  <div ng-show="error" class="alert alert-danger" role="alert">{{error}}</div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Veículos
+      <div class="pull-right">
+        <a ng-href="#cadastroVeiculo">
+          <span class="glyphicon glyphicon-plus"></span> Novo
+        </a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th width="30%">Placa</th>
+            <th width="33%">Renavam</th>
+            <th width="33%">Proprietário</th>
+            <th width="4%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="veiculo in veiculos">
+            <td>{{veiculo.nuPlaca}}</td>
+            <td>{{veiculo.nuRenavam}}</td>
+            <td>{{veiculo.proprietario.nmProprietario}}</td>
+            <td>
+              <a ng-href="#edicaoVeiculo/{{veiculo.nuPlaca}}">
+                <span class="glyphicon glyphicon-edit" title="Editar"></span></a>
+            </td>
+            <td>
+              <a ng-click="deleteVeiculo(veiculo)" style="cursor:pointer">
+              <span class="glyphicon glyphicon-remove" title="Remover"></span></a>
+            </td>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>
