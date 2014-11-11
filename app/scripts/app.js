@@ -26,7 +26,7 @@ angular
         templateUrl: 'views/cadastroVeiculo.html',
         controller: 'VeiculoCtrl'
       })
-      .when('/edicaoVeiculo/:nuPlaca', {
+      .when('/edicaoVeiculo/:placa', {
         templateUrl: 'views/edicaoVeiculo.html',
         controller: 'VeiculoCtrl'
       })

@@ -42,7 +42,7 @@ angular.module('sampleNgFrontendApp').controller('VeiculoCtrl', function ($scope
 
   $scope.deleteVeiculo = function(veiculo) {
 
-    if(!confirm('Deseja realmente remover o veículo placa ' + veiculo.nuPlaca + '?')) {
+    if(!confirm('Deseja realmente remover o veículo placa ' + veiculo.placa + '?')) {
       return;
     }
 
@@ -59,9 +59,9 @@ angular.module('sampleNgFrontendApp').controller('VeiculoCtrl', function ($scope
 
   $scope.loadVeiculo = function() {
 
-    var nuPlaca = $routeParams.nuPlaca;
+    var placa = $routeParams.placa;
 
-    veiculoService.loadVeiculo( nuPlaca)
+    veiculoService.loadVeiculo( placa)
       .success(function (veiculo) {
         $scope.veiculo = veiculo;
       })

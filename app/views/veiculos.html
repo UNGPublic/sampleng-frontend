@@ -22,11 +22,11 @@
         </thead>
         <tbody>
           <tr ng-repeat="veiculo in veiculos">
-            <td>{{veiculo.nuPlaca}}</td>
-            <td>{{veiculo.nuRenavam}}</td>
-            <td>{{veiculo.proprietario.nmProprietario}}</td>
+            <td>{{veiculo.placa}}</td>
+            <td>{{veiculo.renavam}}</td>
+            <td>{{veiculo.proprietario.nome}}</td>
             <td>
-              <a ng-href="#edicaoVeiculo/{{veiculo.nuPlaca}}">
+              <a ng-href="#edicaoVeiculo/{{veiculo.placa}}">
                 <span class="glyphicon glyphicon-edit" title="Editar"></span></a>
             </td>
             <td>

@@ -15,11 +15,11 @@ angular.module('sampleNgFrontendApp').service('veiculoService', function($http, 
   };
 
   this.deleteVeiculo = function(veiculo) {
-    return $http.delete(BACKEND_URL + 'veiculo/'+ veiculo.nuPlaca);
+    return $http.delete(BACKEND_URL + 'veiculo/'+ veiculo.placa);
   };
 
-  this.loadVeiculo = function(nuPlaca) {
-    return $http.get(BACKEND_URL + 'veiculo/' + nuPlaca);
+  this.loadVeiculo = function(placa) {
+    return $http.get(BACKEND_URL + 'veiculo/' + placa);
   };
 
 });
