@@ -9,7 +9,7 @@ Trata-se de um projeto para experimentar tecnologias e auxiliar na definição d
 
 ##Pré-requisitos
 
-- Instalação da VM com base nas orientações dispoíveis neste repositório (https://github.com/ungppublic/vagrant).
+- Configuração do sampleng-backend com base neste repositório (https://github.com/UNGPublic/sampleng-backend)
 - Instalação do Node.js (http://nodejs.org/download).
 - Instação do git (http://git-scm.com/downloads).  
 
@@ -20,9 +20,9 @@ Trata-se de um projeto para experimentar tecnologias e auxiliar na definição d
 npm install -g grunt-cli   
 npm install -g bower</code></pre>
 - Instalar as dependências da aplicação pelo Bower:
-<pre><code>npm install bootstrap --save-dev
-npm install angular --save-dev
-npm install angular-mocks --save-dev</code></pre>
+<pre><code>bower install bootstrap --save-dev
+bower install angular --save-dev
+bower install angular-mocks --save-dev</code></pre>
 - Executar ``grunt-plugins.bat`` para instalar os plugins necessários
 
 ##Testando a aplicação
