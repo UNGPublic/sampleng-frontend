@@ -11,7 +11,7 @@ Trata-se de um projeto para experimentar tecnologias e auxiliar na definição d
 
 - Configuração do sampleng-backend com base neste repositório (https://github.com/UNGPublic/sampleng-backend)
 - Instalação do Node.js (http://nodejs.org/download).
-- Instação do git (http://git-scm.com/downloads).  
+- Instalação do git (http://git-scm.com/downloads).  
 
 ##Instruções
 - Realize o clone, ou checkout se contribuidor, deste projeto e importe na IDE de sua preferência.
