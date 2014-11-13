@@ -36,4 +36,3 @@ angular
     growlProvider.onlyUniqueMessages(false);
     growlProvider.globalTimeToLive(5000);
   });
-;
