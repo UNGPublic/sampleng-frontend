@@ -9,9 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('sampleNgFrontendApp', [
-    'ngRoute'
-  ])
+  .module('sampleNgFrontendApp', ['ngRoute','angular-growl'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -30,7 +28,16 @@ angular
         templateUrl: 'views/edicaoVeiculo.html',
         controller: 'VeiculoCtrl'
       })
+      .when('/logradouros', {
+        templateUrl: 'views/logradouros.html',
+        controller: 'LogradouroCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .config(function(growlProvider) {
+    growlProvider.onlyUniqueMessages(false);
+    growlProvider.globalTimeToLive(5000);
   });
+;

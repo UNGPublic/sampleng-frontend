@@ -7,52 +7,36 @@
  * # VeiculoCtrl
  * Controller of the sampleNgFrontendApp
  */
-angular.module('sampleNgFrontendApp').controller('VeiculoCtrl', function ($scope,$routeParams, $location, veiculoService) {
+angular.module('sampleNgFrontendApp').controller('VeiculoCtrl', function ($scope,$routeParams, $location, veiculoService, growl) {
 
   $scope.loadVeiculos = function() {
 
     veiculoService.loadVeiculos()
       .success(function (veiculos) {
         $scope.veiculos = veiculos;
-      })
-      .error(function (data) {
-        $scope.error = 'Erro ao consultar veículos.';
       });
   };
 
   $scope.insertVeiculo = function(veiculo) {
     veiculoService.insertVeiculo(veiculo)
       .success(function () {
-        $scope.success = 'Veículo cadastrado com sucesso.';
-      })
-      .error(function () {
-        $scope.error = 'Erro ao inserir veículo.';
+        growl.success('Veículo cadastrado com sucesso.');
       });
   };
 
   $scope.updateVeiculo = function(veiculo) {
     veiculoService.updateVeiculo(veiculo)
       .success(function () {
-        $scope.success = 'Veículo atualizado com sucesso.';
-      })
-      .error(function () {
-        $scope.error = 'Erro ao atualizar veículo.';
+        growl.success('Veículo atualizado com sucesso.');
       });
   };
 
   $scope.deleteVeiculo = function(veiculo) {
 
-    if(!confirm('Deseja realmente remover o veículo placa ' + veiculo.placa + '?')) {
-      return;
-    }
-
     veiculoService.deleteVeiculo(veiculo)
       .success(function () {
         $scope.loadVeiculos();
-        $scope.success = 'Veículo removido com sucesso.';
-      })
-      .error(function () {
-        $scope.error = 'Erro ao remover veículo.';
+        growl.success('Veículo removido com sucesso.');
       });
 
   };
@@ -64,9 +48,6 @@ angular.module('sampleNgFrontendApp').controller('VeiculoCtrl', function ($scope
     veiculoService.loadVeiculo( placa)
       .success(function (veiculo) {
         $scope.veiculo = veiculo;
-      })
-      .error(function (data) {
-        $scope.error = 'Erro ao consultar veículo.';
       });
   };
 

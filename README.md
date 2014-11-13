@@ -22,7 +22,8 @@ npm install -g bower</code></pre>
 - Instalar as dependências da aplicação pelo Bower:
 <pre><code>bower install bootstrap --save-dev
 bower install angular --save-dev
-bower install angular-mocks --save-dev</code></pre>
+bower install angular-mocks --save-dev  
+bower install angular-growl-2 --save-dev</code></pre>
 - Executar ``grunt-plugins.bat`` para instalar os plugins necessários
 
 ##Testando a aplicação
