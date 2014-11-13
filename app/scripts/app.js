@@ -28,10 +28,6 @@ angular
         templateUrl: 'views/edicaoVeiculo.html',
         controller: 'VeiculoCtrl'
       })
-      .when('/logradouros', {
-        templateUrl: 'views/logradouros.html',
-        controller: 'LogradouroCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
