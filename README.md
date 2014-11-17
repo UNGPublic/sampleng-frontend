@@ -20,11 +20,9 @@ Trata-se de um projeto para experimentar tecnologias e auxiliar na definição d
 npm install -g grunt-cli   
 npm install -g bower</code></pre>
 - Instalar as dependências da aplicação pelo Bower:
-<pre><code>bower install bootstrap --save-dev
-bower install angular --save-dev
-bower install angular-mocks --save-dev  
-bower install angular-growl-2 --save-dev</code></pre>
-- Executar ``grunt-plugins.bat`` para instalar os plugins necessários
+<pre><code>bower install</code></pre>
+- Instalar os módulos do grunt:
+<pre><code>npm install</pre></code>
 
 ##Testando a aplicação
 - Através do terminal, navegue até a pasta do projeto e digite:  
