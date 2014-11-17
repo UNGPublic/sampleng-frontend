@@ -29,3 +29,7 @@ bower install angular-growl-2 --save-dev</code></pre>
 ##Testando a aplicação
 - Através do terminal, navegue até a pasta do projeto e digite:  
 <pre>grunt serve</pre>
+
+##Publicando no Apache da VM
+- Através do terminal, navegue até a pasta do projeto e digite <pre>grunt</pre>  
+- Copie o conteúdo da pasta __dist__ para a pasta __vagrant/www/sample/app__ gerada na instalação da VM do vagrant.  
