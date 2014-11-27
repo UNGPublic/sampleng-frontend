@@ -1,11 +1,20 @@
 'use strict';
 
-angular.module('sampleNgFrontendApp').factory('errorHandlerInterceptor', function($q,growl){
+angular.module('sampleNgFrontendApp').factory('errorHandlerInterceptor', function($q, growl, BACKEND_URL){
   return{
+
+    request : function(config) {
+        if (config.url.indexOf(".") == -1) {
+          config.url = BACKEND_URL + config.url
+        }
+        return config;
+    },
+
     requestError : function(rejection) {
-      //TODO: ver o que fazer nestes casos
+      //TODO: trabalhar com mensagem de erro ou retry (estilo gmail)
       return rejection;
     },
+
     responseError : function(rejection) {
 
       if( rejection.status === 400 ) { // é um erro tratado pela aplicação.

@@ -18,15 +18,17 @@ angular
       })
       .when('/veiculos', {
         templateUrl: 'views/veiculos.html',
-        controller: 'VeiculoCtrl'
+        controller: 'VeiculoListCtrl'
       })
       .when('/cadastroVeiculo', {
         templateUrl: 'views/cadastroVeiculo.html',
-        controller: 'VeiculoCtrl'
+        controller: 'VeiculoFormCtrl',
+        resolve : veiculoFormCtrl.resolveNew
       })
       .when('/edicaoVeiculo/:placa', {
-        templateUrl: 'views/edicaoVeiculo.html',
-        controller: 'VeiculoCtrl'
+        templateUrl: 'views/cadastroVeiculo.html',
+        controller: 'VeiculoFormCtrl',
+        resolve : veiculoFormCtrl.resolveEdit
       })
       .otherwise({
         redirectTo: '/'
