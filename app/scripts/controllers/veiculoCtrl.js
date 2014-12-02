@@ -18,6 +18,7 @@ angular.module('sampleNgFrontendApp').controller('VeiculoCtrl', function ($scope
   };
 
   $scope.insertVeiculo = function(veiculo) {
+
     veiculoService.insertVeiculo(veiculo)
       .success(function () {
         growl.success('Veículo cadastrado com sucesso.');

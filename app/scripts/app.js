@@ -10,29 +10,11 @@
  */
 angular
   .module('sampleNgFrontendApp', ['ngRoute','angular-growl'])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/veiculos', {
-        templateUrl: 'views/veiculos.html',
-        controller: 'VeiculoCtrl'
-      })
-      .when('/cadastroVeiculo', {
-        templateUrl: 'views/cadastroVeiculo.html',
-        controller: 'VeiculoCtrl'
-      })
-      .when('/edicaoVeiculo/:placa', {
-        templateUrl: 'views/edicaoVeiculo.html',
-        controller: 'VeiculoCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  })
   .config(function(growlProvider) {
     growlProvider.onlyUniqueMessages(false);
     growlProvider.globalTimeToLive(5000);
   });
+
+angular.module('sampleNgFrontendApp').config(function($httpProvider){
+    $httpProvider.interceptors.push('errorHandlerInterceptor');
+});
