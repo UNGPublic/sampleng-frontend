@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sampleNgFrontendApp').factory('errorHandlerInterceptor', function($q,$window,growl,authenticate){
+angular.module('sampleNgFrontendApp').factory('errorHandlerInterceptor', function($q,$window,growl){
   return{
 
     request: function(config) {
@@ -11,15 +11,14 @@ angular.module('sampleNgFrontendApp').factory('errorHandlerInterceptor', functio
       return rejection;
     },
     responseError : function(rejection) {
-      debugger;
+
+
       if( rejection.status === 401 ) { // usuário não autenticado
+        return $q.reject(rejection); // implementar redirect para login
+      }
 
-        if( rejection.status === 400 ) { // é um erro tratado pela aplicação.
-        growl.warning(rejection.data);
-        return $q.reject(rejection);
-        }
-
-        authenticate.loginPage();
+      if( rejection.status === 400 ) { // é um erro tratado pela aplicação.
+       growl.warning(rejection.data);
         return $q.reject(rejection);
       }
 
@@ -33,7 +32,7 @@ angular.module('sampleNgFrontendApp').factory('errorHandlerInterceptor', functio
         return $q.reject(rejection);
       }
 
-       return $q.reject(rejection);
+      return $q.reject(rejection);
 
     }
   };

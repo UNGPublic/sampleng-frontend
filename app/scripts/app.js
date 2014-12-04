@@ -17,4 +17,5 @@ angular
 
 angular.module('sampleNgFrontendApp').config(function($httpProvider){
     $httpProvider.interceptors.push('errorHandlerInterceptor');
+    $httpProvider.interceptors.push('hostAddressInterceptor');
 });

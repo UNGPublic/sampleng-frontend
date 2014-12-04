@@ -9,6 +9,8 @@
  */
 angular.module('sampleNgFrontendApp').controller('VeiculoCtrl', function ($scope,$routeParams, $location, veiculoService, growl) {
 
+  $scope.veiculo = {};
+
   $scope.loadVeiculos = function() {
 
     veiculoService.loadVeiculos()
@@ -18,17 +20,18 @@ angular.module('sampleNgFrontendApp').controller('VeiculoCtrl', function ($scope
   };
 
   $scope.insertVeiculo = function(veiculo) {
-
     veiculoService.insertVeiculo(veiculo)
       .success(function () {
-        growl.success('Veículo cadastrado com sucesso.');
+          $location.path('/veiculos');
+          growl.success('Veículo cadastrado com sucesso.');
       });
   };
 
   $scope.updateVeiculo = function(veiculo) {
     veiculoService.updateVeiculo(veiculo)
       .success(function () {
-        growl.success('Veículo atualizado com sucesso.');
+          $location.path('/veiculos');
+          growl.success('Veículo atualizado com sucesso.');
       });
   };
 

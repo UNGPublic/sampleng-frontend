@@ -16,10 +16,6 @@ angular.module('sampleNgFrontendApp').config(function ($routeProvider) {
       templateUrl: 'views/edicaoVeiculo.html',
       controller: 'VeiculoCtrl'
     })
-    .when('/login', {
-      templateUrl: 'views/login.html',
-      controller: 'LoginCtrl'
-    })
     .otherwise({
       redirectTo: '/'
     });
