@@ -1,3 +1,0 @@
-echo Instalando plugins
-npm install grunt grunt-autoprefixer grunt-concurrent grunt-contrib-clean grunt-contrib-concat  grunt-contrib-connect grunt-contrib-copy grunt-contrib-cssmin grunt-contrib-htmlmin grunt-contrib-imagemin grunt-contrib-jshint grunt-contrib-uglify grunt-contrib-watch grunt-filerev grunt-google-cdn grunt-karma grunt-newer grunt-ng-annotate grunt-svgmin grunt-usemin grunt-wiredep jshint-stylish karma karma-jasmine karma-phantomjs-launcher load-grunt-tasks time-grunt angular-growl-2 --save-dev
-echo Feito!
