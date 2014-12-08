@@ -1,25 +1,25 @@
 'use strict';
 
-angular.module('sampleNgFrontendApp').service('veiculoService', function($http, BACKEND_URL){
+angular.module('sampleNgFrontendApp').service('veiculoService', function($http){
 
   this.loadVeiculos = function() {
-    return $http.get(BACKEND_URL + 'veiculo');
+    return $http.get('veiculo');
   };
 
   this.insertVeiculo = function(veiculo) {
-    return $http.post(BACKEND_URL + 'veiculo', veiculo);
+    return $http.post('veiculo', veiculo);
   };
 
   this.updateVeiculo = function(veiculo) {
-    return $http.put(BACKEND_URL + 'veiculo', veiculo);
+    return $http.put('veiculo', veiculo);
   };
 
   this.deleteVeiculo = function(veiculo) {
-    return $http.delete(BACKEND_URL + 'veiculo/'+ veiculo.placa);
+    return $http.delete('veiculo/'+ veiculo.placa);
   };
 
   this.loadVeiculo = function(placa) {
-    return $http.get(BACKEND_URL + 'veiculo/' + placa);
+    return $http.get('veiculo/' + placa);
   };
 
 });

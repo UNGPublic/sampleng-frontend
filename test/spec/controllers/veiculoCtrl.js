@@ -10,7 +10,7 @@ describe('Controller: VeiculoCtrl', function () {
   beforeEach(inject(function ($controller, $rootScope, $injector) {
     scope = $rootScope.$new();
 	 $httpBackend = $injector.get('$httpBackend');
-	$httpBackend.expectGET('http://localhost:18080/sample/res/veiculo')
+	$httpBackend.expectGET('http://localhost:8080/sample/res/veiculo')
     .respond([{nuPlaca:'123'},{nuPlaca:'321'}]);
     VeiculoCtrl = $controller('VeiculoCtrl', {$scope: scope});
   }));

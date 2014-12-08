@@ -11,15 +11,14 @@ angular.module('sampleNgFrontendApp').factory('errorHandlerInterceptor', functio
       return rejection;
     },
     responseError : function(rejection) {
-      debugger;
+
       if( rejection.status === 401 ) { // usuário não autenticado
-
-        if( rejection.status === 400 ) { // é um erro tratado pela aplicação.
-        growl.warning(rejection.data);
-        return $q.reject(rejection);
-        }
-
         authenticate.loginPage();
+        return $q.reject(rejection);
+      }
+
+      if( rejection.status === 400 ) { // é um erro tratado pela aplicação.
+        growl.warning(rejection.data);
         return $q.reject(rejection);
       }
 

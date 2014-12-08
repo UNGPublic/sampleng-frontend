@@ -1,0 +1,7 @@
+<ul class="nav nav-pills pull-right" ng-controller="HeaderCtrl">
+    <li><a ng-href="#/">Home</a></li>
+    <li><a ng-href="#/veiculos">Veículo</a></li>
+    <li ng-hide="userName"><a ng-click="login()">Entrar</a></li>
+    <li ng-show="userName"><a ng-click="logout()">{{userName}} (logout)</a></li>
+</ul>
+<h3 class="text-muted">Sample AngularJS Frontend</h3>

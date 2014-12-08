@@ -20,16 +20,8 @@
     <div growl></div>
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/veiculos">Veículo</a></li>
-        </ul>
-        <h3 class="text-muted">Sample AngularJS Frontend</h3>
-      </div>
-
+      <div class="header" ng-include="'views/header.html'"></div>
       <div ng-view=""></div>
-
       <div class="footer">
         <p>UNGP</p>
       </div>
@@ -57,10 +49,12 @@
     <script src="scripts/routes.js"></script>
     <script src="scripts/constants.js"></script>
     <script src="scripts/interceptors/errorHandlerInterceptor.js"></script>
+    <script src="scripts/interceptors/hostAddressInterceptor.js"></script>
     <script src="scripts/services/veiculoService.js"></script>
     <script src="scripts/controllers/mainCtrl.js"></script>
     <script src="scripts/controllers/veiculoCtrl.js"></script>
-    <script src="scripts/controllers/loginCtrl.js"></script>
+    <script src="scripts/controllers/loginSuccessCtrl.js"></script>
+    <script src="scripts/controllers/headerCtrl.js"></script>
     <script src="scripts/authenticate.js"></script>
     <!-- endbuild -->
 </body>
