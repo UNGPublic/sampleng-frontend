@@ -1,8 +1,28 @@
 <div class="panel panel-default">
   <div class="panel-heading">Cadastrar veículo</div>
   <div class="panel-body">
-    <form role="form" name="veiculoForm" ng-submit="insertVeiculo(veiculo)" novalidate>
-      <div ng-include="'views/veiculoForm.html'"></div>
-    </form>
+    <div class="form-group">
+      <label for="veiculo.proprietario.nmProprietario">Nome do proprietário</label>
+      <input type="text" id="veiculo.proprietario.nome" ng-model="veiculo.proprietario.nome" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="veiculo.proprietario.nuCnh">CNH do proprietário</label>
+      <input type="text" id="veiculo.proprietario.cnh" ng-model="veiculo.proprietario.cnh" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="veiculo.nuPlaca">Placa do veículo</label>
+      <input type="text" id="veiculo.placa" ng-model="veiculo.placa" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="veiculo.renavam">Renavam do veículo</label>
+      <input type="text" id="veiculo.renavam" ng-model="veiculo.renavam" class="form-control" />
+    </div>
+    <p class="pull-right">
+      <button type="button" class="btn-sm btn btn-primary" ng-click="insertVeiculo(veiculo)">Salvar</button>
+      <button type="button" class="btn-sm btn btn-default" ng-click="voltarVeiculos()">Voltar</button>
+    </p>
   </div>
 </div>

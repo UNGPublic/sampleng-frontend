@@ -14,7 +14,7 @@ angular.module('sampleNgFrontendApp').controller('LoginSuccessCtrl', function ($
 
   authenticate.setAuthenticated(user, ticket);
 
-  $location.path($window.sessionStorage.loginCallback);
-  delete $window.sessionStorage.loginCallback;
+  $location.path($window.sessionStorage.getItem('loginCallback'));
+  $window.sessionStorage.removeItem('loginCallback');
 
 });
