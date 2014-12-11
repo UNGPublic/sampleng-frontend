@@ -5,16 +5,16 @@ angular.module('sampleNgFrontendApp').config(function ($routeProvider) {
       controller: 'MainCtrl'
     })
     .when('/veiculos', {
-      templateUrl: 'views/veiculos.html',
-      controller: 'VeiculoCtrl'
+      templateUrl: 'views/listagemVeiculos.html',
+      controller: 'listagemVeiculosCtrl'
     })
     .when('/cadastroVeiculo', {
       templateUrl: 'views/cadastroVeiculo.html',
-      controller: 'VeiculoCtrl'
+      controller: 'cadastroVeiculoCtrl'
     })
     .when('/edicaoVeiculo/:placa', {
       templateUrl: 'views/edicaoVeiculo.html',
-      controller: 'VeiculoCtrl'
+      controller: 'edicaoVeiculoCtrl'
     })
     .otherwise({
       redirectTo: '/'
