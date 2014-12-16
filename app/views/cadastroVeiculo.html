@@ -1,6 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">Cadastrar veículo</div>
   <div class="panel-body">
+    <form role="form" ng-submit="insertVeiculo(veiculo)">
       <div class="form-group">
         <label for="veiculo.proprietario.nmProprietario">Nome do proprietário</label>
         <input type="text" id="veiculo.proprietario.nome" ng-model="veiculo.proprietario.nome" class="form-control" />
@@ -20,9 +21,11 @@
         <label for="veiculo.renavam">Renavam do veículo</label>
         <input type="text" id="veiculo.renavam" ng-model="veiculo.renavam" class="form-control" />
       </div>
+
       <p class="pull-right">
-        <button type="button" class="btn-sm btn btn-primary" ng-click="insertVeiculo(veiculo)">Salvar</button>
-        <button type="button" class="btn-sm btn btn-default" ng-click="voltarVeiculos()">Voltar</button>
+        <button type="submit" class="btn-sm btn btn-primary">Salvar</button>
+        <a class="btn-sm btn btn-default" href="#/veiculos">Voltar</a>
       </p>
+    </form>
   </div>
 </div>

@@ -10,6 +10,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/angular-growl-2/build/angular-growl.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -17,6 +18,9 @@
     <!-- endbuild -->
   </head>
   <body ng-app="sampleNgFrontendApp">
+    <div class="loading-spinner" loading-spinner>
+        <i class="fa fa-circle-o-notch fa-spin"></i> Loading...
+    </div>
     <div growl></div>
     <!-- Add your site or application content here -->
     <div class="container">
@@ -58,9 +62,13 @@
     <script src="scripts/constants.js"></script>
     <script src="scripts/interceptors/errorHandlerInterceptor.js"></script>
     <script src="scripts/interceptors/hostAddressInterceptor.js"></script>
+    <script src="scripts/interceptors/loadingSpinnerInterceptor.js"></script>
+    <script src="scripts/directives/loadingSpinnerDirective.js"></script>
     <script src="scripts/services/veiculoService.js"></script>
     <script src="scripts/controllers/mainCtrl.js"></script>
-    <script src="scripts/controllers/veiculoCtrl.js"></script>
+    <script src="scripts/controllers/cadastroVeiculoCtrl.js"></script>
+    <script src="scripts/controllers/edicaoVeiculoCtrl.js"></script>
+    <script src="scripts/controllers/listagemVeiculosCtrl.js"></script>
     <!-- endbuild -->
 </body>
 </html>
