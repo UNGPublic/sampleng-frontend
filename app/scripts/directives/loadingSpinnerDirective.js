@@ -8,4 +8,4 @@ angular.module('sampleNgFrontendApp')
                 return element.fadeOut();
             });
         };
-    }])
+    }]);
